@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+ 
+{% block title %} 首页 {% endblock title %}
+ 
+ 
+{% block content %}
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="minicms/static/main.css" /> # 注意外部CSS连接href书写格式
+</head>
+
+
+<ul class="main">
+    {% for column in  home_display_columns %}
+        <li>
+            <a href="{{ column.get_absolute_url }}"> {{ column.name }} </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
