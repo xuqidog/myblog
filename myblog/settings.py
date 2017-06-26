@@ -26,7 +26,7 @@ SECRET_KEY = '8=z^tm08@=y_#jgeoduhulo*lqe@m26pfg2s9t1(5j@53y83fr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.shiyiyue.pro']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.xuqidong.com']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'DjangoUeditor',
+    'gunicorn',
 ]
 
 MIDDLEWARE = [
