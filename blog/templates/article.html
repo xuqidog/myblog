@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+ 
+ 
+ {% block title %} 
+ {{ article.title }}
+ {% endblock title %}
+ 
+ {% block content %}
+ <div style="margin-right: 20px; margin-left: 20px; margin-top: 40px;">
+ 	
+	<h1 style="color: rgb(0,0,0); font-size: 24px"><strong>{{ article.title }}</strong><small>&nbsp;&nbsp;&nbsp;{{ article.update_time }}</small> </h1>
+	<br/>
+	<div id="main" style="background-color: rgb(255,255,255);padding-top: 20px;padding-left: 0px;padding-right: 0px;padding-bottom: 80px;">
+	    {{ article.content|safe }}
+	</div>
+	
+ </div>
+ {% endblock content %}

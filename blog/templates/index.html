@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                
+    
+
+			   <!-- 文章列表 -->
+               <section class="latest section">
+                    <div class="section-inner">
+                        <!-- <h2 class="heading">文章列表</h2> -->
+                        <div class="content">    
+                                               
+                            <hr class="divider" />
+                            {% for article in  all_article %}
+              
+                            <div class="row">
+
+
+                                <article>
+                                    <div class="flex-left units-gap">
+                                        <div class="unit-0">
+                                            <header class="text-small post-header-meta">
+                                                <span class="author">theme</span>
+                                                <span style="font-size: 13px" class="pub-date text-muted">{{ article.update_time }}</span>
+                                            </header>
+                                            <div class="post-main-info">
+                                                <a style="color: rgb(0,0,0); font-size: 20px;" class="title" href="{{ article.get_absolute_url }}"><strong>{{ article.title }}</strong></a>
+                                                <div style="height: 10px"></div>
+                                                <div style="font-size: 14px" class="text-small excerpt">{{ article.content|safe|truncatechars_html:200 }}</div>
+                                                <!-- truncatechars_html:1000 -->
+                                            </div>
+                                            <footer class="text-small post-footer-meta">
+                                                
+                                                    <span class="category">
+                                                <a style="color: #337AB7;" href="">{{ article.slug }}</a>
+                                            </span>
+                                                
+                                                <!-- <span class="views">
+                                                    <a class="text-muted" href="/post/46/">
+                                                    <i class="fa fa-eye" aria-hidden="true"></i> 273</a>
+                                                </span>
+                                                <span class="comments"><a class="text-muted" href="/post/46/#comment-area">
+                                                    <i class="fa fa-comments-o" aria-hidden="true"></i> 1</a>
+                                                </span> -->
+                                            </footer>
+                                        </div>
+                                        
+                                    </div>
+                                </article>
+
+                                <hr class="divider" />
+                               
+                                                      
+                            </div><!--//item-->
+
+
+                            {% endfor %}
+
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->
+
+
+
+                    <!-- 页码 -->
+                    <nav aria-label="Page navigation" style="">
+						  <ul class="pagination">
+
+						    {{ pager_str|safe }}
+	
+						  </ul>
+					</nav>
+
+
+
+                </section><!--//section-->
+                
+
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                
+                
+                <aside class="testimonials aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">座右铭</h2>
+                        <div class="content">
+                            <div class="item">
+                                <blockquote class="quote">                                  
+                                    <p><i></i>也许多少年后在某个地方<br/>
+                              我将轻声叹息将往事回顾<br/>
+                              一片树林里分出两条路<br/>
+                              而我选择了人迹更少的一条<br/>
+                              从此决定了我一生的道路<br/>
+                            <br/>
+                            —弗罗斯特</p>
+                                </blockquote>                
+                                <!-- <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p> -->                                                             
+                            </div><!--//item-->
+                            
+                            <!-- <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Linkedin</a></p>  -->
+                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->                        
+
+
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+
+
+
+
+
+    {% endblock content %}

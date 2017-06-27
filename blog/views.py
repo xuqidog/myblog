@@ -12,7 +12,7 @@ import time
 # 列表详情 
 def column_detail(request, column_slug):
 	column = Column.objects.get(slug=column_slug)
-	return render(request, 'news/column.html',{'column':column})
+	return render(request, 'column.html',{'column':column})
  
 # 文章详情
 def article_detail(request, pk, article_slug):
@@ -24,7 +24,7 @@ def article_detail(request, pk, article_slug):
     if article_slug != article.slug:
         return redirect(article, permanent=True)
 
-    return render(request, 'news/article.html', {'article': article})
+    return render(request, 'article.html', {'article': article})
 
 
 # 首页
@@ -36,7 +36,7 @@ def index(request):
     all_article = Article.objects.all()[page_obj.start:page_obj.end]
 
     for article in all_article:
-        article.content = article.content[0:120]
+        article.content = article.content
         article.update_time = article.update_time.strftime("%Y-%m-%d %H:%M:%S")
 
 
