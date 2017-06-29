@@ -3,13 +3,11 @@
 
 {% block content %}
 
+
 <div class="container" style="margin-top: 20px;">
         <div class="row">
+                <!-- 文章列表 -->
             <div class="primary col-md-8 col-sm-12 col-xs-12">
-                
-    
-
-			   <!-- 文章列表 -->
                <section class="latest section">
                     <div class="section-inner">
                         <!-- <h2 class="heading">文章列表</h2> -->
@@ -32,14 +30,15 @@
                                                 <a style="color: rgb(0,0,0); font-size: 20px;" class="title" href="{{ article.get_absolute_url }}"><strong>{{ article.title }}</strong></a>
                                                 <div style="height: 10px"></div>
                                                 <div style="font-size: 14px" class="text-small excerpt">{{ article.content|safe|truncatechars_html:200 }}</div>
-                                                <!-- truncatechars_html:1000 -->
                                             </div>
-                                            <footer class="text-small post-footer-meta">
-                                                
-                                                    <span class="category">
-                                                <a style="color: #337AB7;" href="">{{ article.slug }}</a>
-                                            </span>
-                                                
+
+
+                                                <footer class="text-small post-footer-meta">
+                                                    {% for column in article.columns %}
+                                                         <span style="display: inline-block;padding: 2px 6px;border-radius: 4px;border: 0.5px solid #337AB7;" class="category">
+                                                            <a style="color: #337AB7;font-size: 14px" href="/?column={{ column.slug }}"><strong>{{ column }}</strong></a>
+                                                         </span>
+                                                    {% endfor %}
                                                 <!-- <span class="views">
                                                     <a class="text-muted" href="/post/46/">
                                                     <i class="fa fa-eye" aria-hidden="true"></i> 273</a>
@@ -47,7 +46,8 @@
                                                 <span class="comments"><a class="text-muted" href="/post/46/#comment-area">
                                                     <i class="fa fa-comments-o" aria-hidden="true"></i> 1</a>
                                                 </span> -->
-                                            </footer>
+                                                </footer>
+
                                         </div>
                                         
                                     </div>
@@ -67,7 +67,7 @@
 
 
                     <!-- 页码 -->
-                    <nav aria-label="Page navigation" style="">
+                    <nav aria-label="Page navigation" style="text-align:center; margin-top: -40px;">
 						  <ul class="pagination">
 
 						    {{ pager_str|safe }}
@@ -77,43 +77,36 @@
 
 
 
-                </section><!--//section-->
-                
-
-            </div><!--//primary-->
+                </section>
+            </div>
+                <!-- 目录 -->
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
-                
-                
-                <aside class="testimonials aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">座右铭</h2>
-                        <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">                                  
-                                    <p><i></i>也许多少年后在某个地方<br/>
-                              我将轻声叹息将往事回顾<br/>
-                              一片树林里分出两条路<br/>
-                              而我选择了人迹更少的一条<br/>
-                              从此决定了我一生的道路<br/>
-                            <br/>
-                            —弗罗斯特</p>
-                                </blockquote>                
-                                <!-- <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p> -->                                                             
-                            </div><!--//item-->
-                            
-                            <!-- <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Linkedin</a></p>  -->
-                            
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->                        
-
-
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
+                <section class="recent-posts">
+                    <h3 class="hide-on-mobile">目录</h3>
+                        <ul class="list-unstyle text-small">
+                        {% for article in  all_article %}
+                            <li style="margin-bottom: 7px; "><a style="color: #337AB7;" href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                </section>
+            </div>
+                <!-- 标签 -->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                <section class="recent-posts">
+                    <h3 class="hide-on-mobile">标签</h3>
+                        <ul class="list-unstyle text-small">
+                        <li style="margin-bottom: 7px; "><a style="color: #337AB7;" href="/">全部</a></li>
+                        {% for column in  nav_display_columns %}
+                            <li style="margin-bottom: 7px; "><a style="color: #337AB7;" href="/?column={{ column.slug }}">{{ column.name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                </section>
+            </div>
+        </div>
+</div>
 
 
 
 
 
-    {% endblock content %}
+{% endblock content %}

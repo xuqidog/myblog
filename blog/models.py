@@ -52,6 +52,6 @@ class Article(models.Model):
         return reverse('article', args=(self.pk, self.slug))
  
     class Meta:
-        verbose_name = '教程'
-        verbose_name_plural = '教程'
+        verbose_name = '文章'
+        verbose_name_plural = '文章'
 

@@ -23,9 +23,10 @@ from django.views.static import serve
 urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^static/(?P<path>.*)$', serve,{ 'document_root': settings.STATIC_URL}), 
-    url(r'^column/(?P<column_slug>[^/]+)/$', column_detail, name='column'),
+    # url(r'^column/(?P<column_slug>[^/]+)/$', column_detail, name='column'),
     # url(r'^news/(?P<article_slug>[^/]+)/$', article_detail, name='article'),
     url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$', article_detail, name='article'),
+    # url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$', column_detail, name='column'),
     url(r'^ueditor/',include(DjangoUeditor_urls)),
     url(r'^admin/', admin.site.urls),
 ]
