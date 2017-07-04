@@ -58,7 +58,7 @@ ROOT_URLCONF = 'myblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], #修改了这一行
+        'DIRS': [os.path.join(BASE_DIR, '/blog/templates')],  # 修改了这一行
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,10 +124,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 公共的 static 文件，比如 jquery.js 可以放这里，这里面的文件夹不能包含 STATIC_ROOT
-#STATICFILES_DIRS = (
+# STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, "static"),
-    # os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),  
-#)
+#    os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),
+# )
  
 # upload folder
 MEDIA_URL = '/media/'
