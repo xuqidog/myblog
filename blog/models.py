@@ -55,3 +55,25 @@ class Article(models.Model):
         verbose_name = '文章'
         verbose_name_plural = '文章'
 
+
+@python_2_unicode_compatible
+class YouDao(models.Model):
+    title = models.CharField('标题', max_length=256)
+    channelName = models.CharField('分类', max_length=256)
+    type = models.CharField('标签', max_length=256)
+    url = models.CharField('内容链接', max_length=256)
+    image_desk = models.CharField('图片链接', max_length=256)
+    audiourl = models.CharField('音频链接', max_length=256)
+    videourl = models.CharField('视频链接', max_length=256)
+    time = models.CharField('创建时间', max_length=256)
+    slug = models.CharField('slug', max_length=256, db_index=True)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('youDao')
+
+    class Meta:
+        verbose_name = '有道精选'
+        verbose_name_plural = '有道精选'

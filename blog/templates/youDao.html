@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+有道精选
+{% endblock title %}
+
+{# 导航#}
+{% block nav %}
+    <header class="header">
+        <div class="container">
+            <ul class="nav nav-pills">
+               <li ><a style="color: #337AB7" href="/">Home</a></li>
+               <li class="active"><a href="{%url 'youDao' %}">有道精选</a></li>
+            </ul>
+        </div><!--//container-->
+    </header>
+{% endblock %}
+
+{# 内容#}
+{% block content %}
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+
+                <!-- 文章列表 -->
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+
+               <section class="latest section">
+
+                    <div class="section-inner">
+                    <a href="http://www.youdao.com/?cookie=new" style="color: #cc1111"><strong>声明：</strong>列表内容均来源有道翻译，每天定时爬取最新文章</a>
+                        <!-- <h2 class="heading">文章列表</h2> -->
+                        <div class="content">
+
+                            <hr class="divider" />
+                            {% for article in  all_article %}
+
+                                <div class="item row">
+                                    <a class="col-md-4 col-sm-4 col-xs-12" href="" target="_blank">
+                                        <img class="img-responsive project-image" src="{{ article.image_desk }}" alt="project name" />
+                                    </a>
+                                    <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                        <h3 class="title"><a style="color: #337AB7" href="{{ article.url }}" target="_blank">{{ article.title }}</a></h3>
+                                        <p style="color: #5f6b77">{{ article.type }}</p>
+                                        <p style="color: #5f6b77">{{ article.time }}</p>
+                                    </div><!--//desc-->
+                                 </div><!--//item-->
+
+                            {% endfor %}
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+
+
+
+                    <!-- 页码 -->
+                    <nav aria-label="Page navigation" style="text-align:center; margin-top: -40px;">
+						  <ul class="pagination">
+
+						    {{ pager_str|safe }}
+
+						  </ul>
+					</nav>
+
+
+
+                </section>
+            </div>
+                <!-- 标签 -->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                <section class="recent-posts">
+                    <h3 class="hide-on-mobile">标签</h3>
+                        <ul class="list-unstyle text-small">
+                        <li style="margin-bottom: 7px; "><a style="color: #337AB7;" href="{%url 'youDao' %}">全部&nbsp;&nbsp;<span class="badge">{{ all_all }}</span></a></li>
+                        {% for type in  all_type %}
+                            <li style="margin-bottom: 7px; "><a style="color: #337AB7;" href="?type={{ type.type }}">{{ type.type }}&nbsp;&nbsp;<span class="badge">{{ type.count }}</span></a></li>
+                        {% endfor %}
+                        </ul>
+                </section>
+            </div>
+        </div>
+</div>
+{% endblock content %}

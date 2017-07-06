@@ -29,31 +29,16 @@
 </head> 
 
 <body style="background-color: rgb(255,255,255);">
-    <!-- ******HEADER****** --> 
-    <header class="header">
-        <div class="container">                       
-            
-            <div class="profile-content pull-left">
-                <!-- <a class="name">简单</a> -->
-                <a href="/" class="desc">theme's blog</a>
-            </div><!--//profile-->
-            
-            <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>   -->            
-        </div><!--//container-->
-    </header><!--//header-->
-    
-    
 
+{#    导航#}
+    {% block nav %}
+    {% endblock nav %}
+
+{#    内容#}
     {% block content %}
-
     {% endblock content %}
 
 
-
-
-
-
-    
     <!-- ******FOOTER****** --> 
     <!-- <div class="footer"> -->
         <div style="padding-bottom: 20px;" class="container text-center">
