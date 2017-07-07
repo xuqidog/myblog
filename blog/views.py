@@ -27,19 +27,19 @@ def article_detail(request, pk, article_slug):
     return render(request, 'article.html', {'article': article})
 
 # 首页
-# @cache_page(60 * 15)  # 缓存时间 秒数
+@cache_page(60 * 15)  # 缓存时间 秒数
 def index(request):
     current_page = int(request.GET.get('page', 1))
     column_slug = request.GET.get('column', 1)
     all_columns = []
     if column_slug != 1:
-        page_obj = Pager(current_page, column_slug)
+        page_obj = Pager(current_page, column_slug, 'column')
         all_columns = Column.objects.get(slug=column_slug)
         all_article = all_columns.article_set.all()
         all_item = all_article.count()
         all_article = all_article[page_obj.start:page_obj.end]
     else:
-        page_obj = Pager(current_page, '/')
+        page_obj = Pager(current_page, '/', 'column')
         all_article = Article.objects.all()[page_obj.start:page_obj.end]
         # 获取所有的分页
         all_item = Article.objects.all().count()
@@ -63,9 +63,10 @@ def index(request):
 
 # 分页
 class Pager(object):
-    def __init__(self, current_page, column):
+    def __init__(self, current_page, column, type):
         self.current_page = int(current_page)
         self.column = column
+        self.type = type
 
     @property
     def start(self):
@@ -83,7 +84,7 @@ class Pager(object):
 
         pager_str = ""
         if self.column != '/':
-            self.column = '&column='+self.column
+            self.column = '&'+self.type+'='+self.column
         else:
             self.column = ''
 
@@ -95,13 +96,36 @@ class Pager(object):
 
         # 标签页
         for i in range(1, all_page+1):
-            # 每次循环生成一个标签
-            if self.current_page == i:
-                temp = '<li class="active"><a href="?page=%d%s">%d</a></li>' % (i, self.column, i,)
+            if all_page <= 9:  # 只显示一行的页码
+                # 每次循环生成一个标签
+                if self.current_page == i:
+                    temp = '<li class="active"><a href="?page=%d%s">%d</a></li>' % (i, self.column, i,)
+                else:
+                    temp = '<li><a href="?page=%d%s">%d</a></li>' % (i, self.column, i,)
+                pager_str += temp
             else:
-                temp = '<li><a href="?page=%d%s">%d</a></li>' % (i, self.column, i,)
+                if self.current_page-5 > 0:  # 第一页
+                    temp = '<li><a href="?page=%d%s">%s</a></li>' % (1, self.column, '...',)
+                    pager_str += temp
+                last_page = 0
+                for page in range(self.current_page-4, self.current_page):
+                    if page <= 0:
+                        last_page += 1
+                    else:
+                        temp = '<li><a href="?page=%d%s">%d</a></li>' % (page, self.column, page,)
+                        pager_str += temp
+                temp = '<li class="active"><a href="?page=%d%s">%d</a></li>' % (self.current_page, self.column, self.current_page,)
+                pager_str += temp
+                for page in range(self.current_page+1, self.current_page+4+1+last_page):
+                    if page <= all_page:
+                        temp = '<li><a href="?page=%d%s">%d</a></li>' % (page, self.column, page,)
+                        pager_str += temp
+                if self.current_page+4+last_page < all_page:  # 最后一页
+                    temp = '<li><a href="?page=%d%s">%s</a></li>' % (all_page, self.column, '...',)
+                    pager_str += temp
+                break
             # 把标签拼接然后返回给前端
-            pager_str += temp
+            # pager_str += temp
 
         # 后一页
         if self.current_page == all_page:
@@ -111,6 +135,7 @@ class Pager(object):
         return pager_str
 
 # 有道
+@cache_page(60 * 15)  # 缓存时间 秒数
 def youDao(request):
     current_page = int(request.GET.get('page', 1))
     list_type = request.GET.get('type', 1)
@@ -124,10 +149,10 @@ def youDao(request):
     if list_type != 1:
         all_article = YouDao.objects.filter(type=list_type)
         all_item = all_article.count()
-        page_obj = Pager(current_page, list_type)
+        page_obj = Pager(current_page, list_type, 'type')
         all_article = all_article[page_obj.start:page_obj.end]
     else:
-        page_obj = Pager(current_page, '/')
+        page_obj = Pager(current_page, '/', 'type')
         all_item = all_all
         all_article = all_article[page_obj.start:page_obj.end]
 

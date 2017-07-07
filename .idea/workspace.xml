@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c7f98c-e353-4691-84a6-62be1867e5ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/templates/youDao.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getDataTimer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_YouDao.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/admin.py" afterPath="$PROJECT_DIR$/blog/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/base.html" afterPath="$PROJECT_DIR$/blog/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/index.html" afterPath="$PROJECT_DIR$/blog/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/youDao.html" afterPath="$PROJECT_DIR$/blog/templates/youDao.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myblog/urls.py" afterPath="$PROJECT_DIR$/myblog/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_YouDao.log" afterPath="$PROJECT_DIR$/get_YouDao.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_YouDao.py" afterPath="$PROJECT_DIR$/get_YouDao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nohup.out" afterPath="$PROJECT_DIR$/nohup.out" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="72" />
+            <state relative-caret-position="265">
+              <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -59,66 +54,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="youDao.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blog/templates/youDao.html">
+      <file leaf-file-name="get_YouDao.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_YouDao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="29" column="95" lean-forward="true" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+            <state relative-caret-position="355">
+              <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="19" />
               <folding>
-                <element signature="e#100#404#0#HTML" expanded="false" />
-                <element signature="e#218#240#0#HTML" expanded="true" />
-                <element signature="e#785#807#0#HTML" expanded="true" />
-                <element signature="e#1554#1576#0#HTML" expanded="true" />
-                <element signature="e#1690#1712#0#HTML" expanded="true" />
-                <element signature="e#1779#1801#0#HTML" expanded="true" />
-                <element signature="e#2389#3139#0#HTML" expanded="false" />
-                <element signature="e#2716#2722#0#HTML" expanded="true" />
-                <element signature="e#2722#2728#0#HTML" expanded="true" />
-                <element signature="e#2962#2968#0#HTML" expanded="true" />
-                <element signature="e#2968#2974#0#HTML" expanded="true" />
-                <marker date="1499336955000" expanded="false" signature="962:2006" ph="..." />
+                <element signature="e#98#108#0" expanded="true" />
+                <element signature="e#2684#2954#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myblog/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#639#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/templates/index.html">
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="70" />
+              <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="51" />
               <folding>
-                <element signature="e#281#303#0#HTML" expanded="true" />
-                <element signature="e#585#4281#0#HTML" expanded="false" />
-                <element signature="e#2405#2499#0#HTML" expanded="true" />
-                <element signature="e#4322#4863#0#HTML" expanded="false" />
+                <element signature="e#223#232#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/views.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="138" column="26" lean-forward="false" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
               <folding>
-                <element signature="e#24#59#0" expanded="true" />
-                <element signature="e#354#461#0" expanded="false" />
-                <element signature="e#554#833#0" expanded="false" />
-                <element signature="e#2129#3778#0" expanded="false" />
+                <element signature="e#24#332#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -144,14 +111,15 @@
         <option value="$PROJECT_DIR$/myblog/settings.py" />
         <option value="$PROJECT_DIR$/blog/admin.py" />
         <option value="$PROJECT_DIR$/create_demo_records.py" />
-        <option value="$PROJECT_DIR$/get_YouDao.py" />
         <option value="$PROJECT_DIR$/getDataTimer.py" />
         <option value="$PROJECT_DIR$/blog/templates/base.html" />
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/blog/templates/index.html" />
         <option value="$PROJECT_DIR$/myblog/urls.py" />
-        <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/blog/templates/youDao.html" />
+        <option value="$PROJECT_DIR$/blog/views.py" />
+        <option value="$PROJECT_DIR$/myblog/wsgi.py" />
+        <option value="$PROJECT_DIR$/get_YouDao.py" />
       </list>
     </option>
   </component>
@@ -168,8 +136,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3" />
-    <option name="y" value="224" />
+    <option name="x" value="6" />
+    <option name="y" value="37" />
     <option name="width" value="1280" />
     <option name="height" value="774" />
   </component>
@@ -198,52 +166,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,7 +534,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="224" width="1280" height="774" extended-state="0" />
+    <frame x="6" y="37" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2714055" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -649,17 +571,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myblog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#639#1" expanded="false" />
-            <element signature="e#640#681#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -702,7 +613,8 @@
             <element signature="e#24#59#0" expanded="true" />
             <element signature="e#354#461#0" expanded="false" />
             <element signature="e#554#833#0" expanded="false" />
-            <element signature="e#2129#3778#0" expanded="false" />
+            <element signature="e#896#2115#0" expanded="false" />
+            <element signature="e#5205#6154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,7 +678,8 @@
             <element signature="e#24#59#0" expanded="true" />
             <element signature="e#354#461#0" expanded="false" />
             <element signature="e#554#833#0" expanded="false" />
-            <element signature="e#2129#3778#0" expanded="false" />
+            <element signature="e#896#2115#0" expanded="false" />
+            <element signature="e#5205#6154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -840,7 +753,8 @@
             <element signature="e#24#59#0" expanded="true" />
             <element signature="e#354#461#0" expanded="false" />
             <element signature="e#554#833#0" expanded="false" />
-            <element signature="e#2129#3778#0" expanded="false" />
+            <element signature="e#896#2115#0" expanded="false" />
+            <element signature="e#5205#6154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -900,7 +814,8 @@
             <element signature="e#24#59#0" expanded="true" />
             <element signature="e#354#461#0" expanded="false" />
             <element signature="e#554#833#0" expanded="false" />
-            <element signature="e#2129#3778#0" expanded="false" />
+            <element signature="e#896#2115#0" expanded="false" />
+            <element signature="e#5205#6154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1019,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#24#332#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/column.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1056,18 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_YouDao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#661#959#0" expanded="false" />
-            <element signature="e#720#744#0" expanded="false" />
-            <element signature="e#2323#2593#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-635">
@@ -1081,16 +974,6 @@
         <state relative-caret-position="240">
           <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="67" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="72" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,10 +993,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="102" column="21" lean-forward="true" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+          <folding>
+            <element signature="e#24#59#0" expanded="true" />
+            <element signature="e#354#461#0" expanded="false" />
+            <element signature="e#554#833#0" expanded="false" />
+            <element signature="e#896#2115#0" expanded="false" />
+            <element signature="e#5205#6154#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="70" />
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           <folding>
             <element signature="e#281#303#0#HTML" expanded="true" />
             <element signature="e#585#4281#0#HTML" expanded="false" />
@@ -1133,36 +1030,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/views.py">
+    <entry file="file://$PROJECT_DIR$/blog/templates/youDao.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="138" column="26" lean-forward="false" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#24#59#0" expanded="true" />
-            <element signature="e#354#461#0" expanded="false" />
-            <element signature="e#554#833#0" expanded="false" />
-            <element signature="e#2129#3778#0" expanded="false" />
+            <element signature="e#100#404#0#HTML" expanded="false" />
+            <element signature="e#218#240#0#HTML" expanded="true" />
+            <element signature="e#571#2347#0#HTML" expanded="false" />
+            <element signature="e#784#806#0#HTML" expanded="true" />
+            <element signature="e#1553#1575#0#HTML" expanded="true" />
+            <element signature="e#1689#1711#0#HTML" expanded="true" />
+            <element signature="e#1778#1800#0#HTML" expanded="true" />
+            <element signature="e#2388#3138#0#HTML" expanded="false" />
+            <element signature="e#2715#2721#0#HTML" expanded="true" />
+            <element signature="e#2721#2727#0#HTML" expanded="true" />
+            <element signature="e#2961#2967#0#HTML" expanded="true" />
+            <element signature="e#2967#2973#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/templates/youDao.html">
+    <entry file="file://$PROJECT_DIR$/myblog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="95" lean-forward="true" selection-start-line="29" selection-start-column="95" selection-end-line="29" selection-end-column="95" />
+        <state relative-caret-position="210">
+          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
           <folding>
-            <element signature="e#100#404#0#HTML" expanded="false" />
-            <element signature="e#218#240#0#HTML" expanded="true" />
-            <element signature="e#785#807#0#HTML" expanded="true" />
-            <element signature="e#1554#1576#0#HTML" expanded="true" />
-            <element signature="e#1690#1712#0#HTML" expanded="true" />
-            <element signature="e#1779#1801#0#HTML" expanded="true" />
-            <element signature="e#2389#3139#0#HTML" expanded="false" />
-            <element signature="e#2716#2722#0#HTML" expanded="true" />
-            <element signature="e#2722#2728#0#HTML" expanded="true" />
-            <element signature="e#2962#2968#0#HTML" expanded="true" />
-            <element signature="e#2968#2974#0#HTML" expanded="true" />
-            <marker date="1499336955000" expanded="false" signature="962:2006" ph="..." />
+            <element signature="e#24#332#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <element signature="e#223#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_YouDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="19" />
+          <folding>
+            <element signature="e#98#108#0" expanded="true" />
+            <element signature="e#2684#2954#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
