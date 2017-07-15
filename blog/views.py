@@ -139,7 +139,7 @@ class Pager(object):
 def youDao(request):
     current_page = int(request.GET.get('page', 1))
     list_type = request.GET.get('type', 1)
-    all_article = YouDao.objects.all()
+    all_article = YouDao.objects.order_by("time").reverse()
     all_all = all_article.count()
     types = [x.type for x in all_article]  # 获取所有type 并且去重
     all_type = []
@@ -147,7 +147,7 @@ def youDao(request):
         all_type.append({'type': one, 'count': types.count(one)})
 
     if list_type != 1:
-        all_article = YouDao.objects.filter(type=list_type)
+        all_article = YouDao.objects.filter(type=list_type).order_by("time").reverse()
         all_item = all_article.count()
         page_obj = Pager(current_page, list_type, 'type')
         all_article = all_article[page_obj.start:page_obj.end]
